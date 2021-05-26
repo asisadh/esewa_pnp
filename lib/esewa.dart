@@ -62,7 +62,7 @@ class ESewaPayment {
     required this.productName,
     required this.productID,
     required this.callBackURL,
-  }) : assert(productPrice > 10);
+  }) : assert(productPrice > 9);
 
   Map<String, dynamic> toMap() {
     return {

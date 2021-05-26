@@ -11,8 +11,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ESewaPnp _esewaPnp;
-  ESewaConfiguration _configuration;
+  late ESewaPnp _esewaPnp;
+  late ESewaConfiguration _configuration;
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -68,12 +68,12 @@ class _MyAppState extends State<MyApp> {
                 productId: "abc123",
                 productName: "Flutter SDK Example",
                 onSuccess: (result) {
-                  ScaffoldMessenger.of(context).showSnackBar(_buildSnackBar(
-                      Color.fromRGBO(65, 161, 36, 1), result.message));
+                  // ScaffoldMessenger.of(context).showSnackBar(_buildSnackBar(
+                  //     Color.fromRGBO(65, 161, 36, 1), result.message));
                 },
                 onFailure: (e) {
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(_buildSnackBar(Colors.red, e.message));
+                  // ScaffoldMessenger.of(context)
+                  //     .showSnackBar(_buildSnackBar(Colors.red, e.message));
                 },
               ),
               SizedBox(
