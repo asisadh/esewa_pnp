@@ -35,7 +35,7 @@ public class SwiftEsewaPnpPlugin: NSObject, FlutterPlugin, EsewaSDKPaymentDelega
         let env = (configs.value(forKey: "env") as! String) == "live" ? EsewaSDKEnvironment.production : EsewaSDKEnvironment.development
         
         let payment = argsMap.value(forKey: "payment") as! NSDictionary
-        let amount = String(payment.value(forKey: "amount") as! Int)
+        let amount = String(payment.value(forKey: "amount") as! Double)
         let productName = payment.value(forKey: "productName") as! String
         let productID = payment.value(forKey: "productID") as! String
         let callBackURL = payment.value(forKey: "callBackURL") as! String
